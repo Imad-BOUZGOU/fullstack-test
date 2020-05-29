@@ -1,5 +1,4 @@
-{
-  "countries": [
+[
     {
       "name": "France"
     },
@@ -13,4 +12,4 @@
       "name": "Portugal"
     }
   ]
-}
+
