@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd frontend && npm run build",
     "install-client": "cd frontend  && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node index.js",
     "client": "cd frontend  && npm start",
-    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon indenpm x.js\" \"npm run client\""
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon index.js\" \"npm run client\""
+
   },
   "keywords": [],
   "author": "",
@@ -21,5 +21,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.16",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
   }
 }

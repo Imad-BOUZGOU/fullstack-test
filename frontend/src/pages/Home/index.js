@@ -58,6 +58,7 @@ export  const ProjectsList =()=> {
     const getServicesTo=()=>{
         const servicesName = _.uniq(
         _.map(projects, function(p) {
+            console.log(p.services)
 
             return p.services; }))
 
