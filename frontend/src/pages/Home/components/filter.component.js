@@ -25,7 +25,7 @@ export default function SelectedListItem() {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} style={{display:'flex',flexDirection:'column',overflowY:'auto'}}>
             <List component="nav" aria-label="main mailbox folders">
                 <ListItem
                     button
