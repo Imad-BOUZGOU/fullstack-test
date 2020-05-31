@@ -9,9 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
 
 
-app.get("/", function (req, res) {
-  res.redirect('/');
-});
+
 
 app.use(cors());
 app.use(express.json());
