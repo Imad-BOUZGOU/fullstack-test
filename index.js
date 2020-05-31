@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.DB_URI;
-mongoose.connect(process.env.MONGODB_URI ||uri, { useNewUrlParser: true, useCreateIndex: true }
+mongoose.connect(process.env.MONGODB_URI ||"mongodb+srv://imad:imad1995@cluster0-1aaxg.mongodb.net/kissoDB?retryWrites=true&w=majority", { useNewUrlParser: true, useCreateIndex: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -25,7 +25,7 @@ connection.once('open', () => {
 })
 
 
-const projectRouter = require('./routes/projects');
+const projectRouter = require('./backend/routes/projects');
 
 app.use('/projects', projectRouter);
 

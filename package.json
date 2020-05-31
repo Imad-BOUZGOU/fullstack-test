@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd ../client && npm run build",
-    "install-client": "cd ../client && npm install",
+    "build": "cd frontend && npm run build",
+    "install-client": "cd frontend  && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node index.js",
-    "client": "cd ../client && npm start",
-    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\""
+    "client": "cd frontend  && npm start",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon indenpm x.js\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
