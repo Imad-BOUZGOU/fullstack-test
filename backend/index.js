@@ -1,8 +1,13 @@
 const express = require("express");
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+
 const cors = require('cors');
 require('dotenv').config();
 const app = express();
+
+const PORT = process.env.PORT || 8080; // Step 1
+
 
 app.get("/", function (req, res) {
   res.redirect('projects');
@@ -24,8 +29,14 @@ const projectRouter = require('./routes/projects');
 
 app.use('/projects', projectRouter);
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 
-app.listen(5000, function () {
-  console.log("app listening on port 5000!");
+// HTTP request logger
+app.use(morgan('tiny'));
+
+app.listen(PORT, function () {
+  console.log("app listening on port "+PORT);
 });

@@ -28,7 +28,7 @@ export  const ProjectsList =()=> {
     //   console.log(projects);
 
      useEffect(()=>{
-         axios.get('http://localhost:5000/projects/')
+         axios.get('http://localhost:8080/projects/')
              .then(response => {
                  setProjects( response.data )
              })
