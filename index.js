@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 
 app.get("/", function (req, res) {
-  res.redirect('projects');
+  res.redirect('/');
 });
 
 app.use(cors());
